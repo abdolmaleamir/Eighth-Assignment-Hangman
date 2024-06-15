@@ -1,0 +1,24 @@
+.title{
+    -fx-font-size: 18px;
+}
+
+.backBtn{
+    -fx-font-size: 14px;
+    -fx-background-radius: 4px;
+}
+
+.historyContainer{
+    -fx-spacing: 20px;
+    -fx-fill-width: true;
+}
+
+.gameContainer{
+    -fx-spacing: 10px;
+    -fx-padding: 5px;
+    -fx-background-radius: 10px;
+    -fx-fill-height: true;
+}
+
+.gameContainer Label{
+    -fx-font-size: 14px;
+}

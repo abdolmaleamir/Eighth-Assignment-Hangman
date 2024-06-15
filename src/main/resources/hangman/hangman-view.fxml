@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+<?import javafx.scene.layout.GridPane?>
+<HBox fx:id="rootContainer" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="hangman.HangmanController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <VBox fx:id="hangSceneContainer" alignment="CENTER" spacing="40">
+        <SVGPath fx:id="hangmanSvg" styleClass="hangman-svg" />
+
+        <Label styleClass="gameTitle" text="HANGMAN GAME" alignment="BASELINE_CENTER"/>
+        <Label fx:id="timeLabel" text="Time: 0 seconds"/>
+    </VBox>
+
+    <VBox style="-fx-spacing: 40px; -fx-alignment: center;">
+
+        <HBox style="-fx-spacing: 40px; -fx-alignment: center;">
+            <Label fx:id="usernameLabel" text="Username: "/>
+            <Label fx:id="nameLabel" text="Name: "/>
+        </HBox>
+
+        <HBox fx:id="answerContainer" style="-fx-alignment: top-center; -fx-spacing: 4px;">
+        </HBox>
+
+        <GridPane fx:id="keysGrid" styleClass="keysGrid">
+
+        </GridPane>
+
+    </VBox>
+
+</HBox>
